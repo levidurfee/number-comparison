@@ -13,11 +13,14 @@ function pl($m) {
 }
 
 function f($a, $i = 0, $m = 0) {
+    pl('f()' . $m);
     // maybe remove - $i
     if($m >= count($a) - $i) {
+        pl('here a [' . $m . ']');
         return $m;
     }
     if($i >= count($a)) {
+        pl('here b');
         return $m;
     }
 
@@ -56,6 +59,8 @@ function f($a, $i = 0, $m = 0) {
 }
 
 // output should start with 6
-echo f($sampleArray);
+pl(
+    f($sampleArray)
+);
 
 echo "\n\nfinished\n";
