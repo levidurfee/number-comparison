@@ -33,11 +33,10 @@ function f($a, $i = 0, $m = 0) {
             if($counter > $m) {
                 $m = $counter;
             }
-            pl($counter);
         } else {
             // if it is greater than 45, and they're sorted, there is no reason
             // to continue looking at the other numbers.
-            return $m;
+            break;
         }
     }
 
@@ -51,6 +50,7 @@ function f($a, $i = 0, $m = 0) {
     f($a, $i + 1, $m);
 }
 
+// output should start with 6
 echo f($sampleArray);
 
 echo "\n\nfinished\n";
