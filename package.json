@@ -1,0 +1,26 @@
+{
+  "name": "arctan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levidurfee/deleteme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levidurfee/deleteme/issues"
+  },
+  "homepage": "https://github.com/levidurfee/deleteme#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.3"
+  }
+}
