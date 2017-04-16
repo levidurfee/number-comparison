@@ -44,15 +44,6 @@ function f($a, $i = 0, $m = 0) {
         }
     }
 
-    //pl($m);
-
-    // moved this into the loop
-    //if($counter > $m) {
-    //    $m = $counter;
-    //}
-
-    // am i making it here?
-    //pl("recursive");
     return f($a, $i + 1, $m);
 }
 
