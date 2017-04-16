@@ -17,10 +17,6 @@ function f($a, $i = 0, $m = 0) {
     if($m >= count($a) - $i) {
         return $m;
     }
-    if($i >= count($a)) {
-        pl('here b');
-        return $m;
-    }
 
     // set the temp counter to 0
     $counter = 0;
