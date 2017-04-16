@@ -13,22 +13,42 @@ function pl($m) {
 }
 
 function f($a, $i = 0, $m = 0) {
-    if($m >= count($a)) {
+    // maybe remove - $i
+    if($m >= count($a) - $i) {
         return $m;
     }
+
+    // set the temp counter to 0
     $counter = 0;
+
+    // loop through the numbers starting after $a[$i]
     for($j=$i + 1; $j<count($a); $j++) {
-        $difference = abs($a[$i] - $a[$i + 1]);
+        // calc the difference outside the conditional to keep it pretty
+        $difference = abs($a[$i] - $a[$j]);
+        // check if the difference is 45 or less
         if($difference <= 45) {
+            // increment our counter
             $counter++;
+            // we want to find the max.
+            if($counter > $m) {
+                $m = $counter;
+            }
+            pl($counter);
+        } else {
+            // if it is greater than 45, and they're sorted, there is no reason
+            // to continue looking at the other numbers.
+            return $m;
         }
     }
 
-    if($counter > $m) {
-        $m = $counter;
-    }
+    // moved this into the loop
+    //if($counter > $m) {
+    //    $m = $counter;
+    //}
 
-    f($a, $i + 1, $m); 
+    // am i making it here?
+    pl("recursive");
+    f($a, $i + 1, $m);
 }
 
 echo f($sampleArray);
