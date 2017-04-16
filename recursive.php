@@ -15,7 +15,7 @@ function pl($m) {
 function f($a, $i = 0, $m = 0) {
     // maybe remove - $i
     if($m >= count($a) - $i) {
-        return $m;
+        return $m + 1;
     }
 
     // set the temp counter to 0
