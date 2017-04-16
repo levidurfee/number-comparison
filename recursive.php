@@ -13,10 +13,8 @@ function pl($m) {
 }
 
 function f($a, $i = 0, $m = 0) {
-    pl('f()' . $m);
     // maybe remove - $i
     if($m >= count($a) - $i) {
-        pl('here a [' . $m . ']');
         return $m;
     }
     if($i >= count($a)) {
@@ -55,7 +53,7 @@ function f($a, $i = 0, $m = 0) {
 
     // am i making it here?
     //pl("recursive");
-    f($a, $i + 1, $m);
+    return f($a, $i + 1, $m);
 }
 
 // output should start with 6
