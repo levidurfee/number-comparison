@@ -17,6 +17,9 @@ function f($a, $i = 0, $m = 0) {
     if($m >= count($a) - $i) {
         return $m;
     }
+    if($i >= count($a)) {
+        return $m;
+    }
 
     // set the temp counter to 0
     $counter = 0;
@@ -40,13 +43,15 @@ function f($a, $i = 0, $m = 0) {
         }
     }
 
+    //pl($m);
+
     // moved this into the loop
     //if($counter > $m) {
     //    $m = $counter;
     //}
 
     // am i making it here?
-    pl("recursive");
+    //pl("recursive");
     f($a, $i + 1, $m);
 }
 
